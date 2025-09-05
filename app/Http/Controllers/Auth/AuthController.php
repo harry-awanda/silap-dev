@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 class AuthController extends Controller {
     // Method untuk menampilkan form login
   public function showLoginForm() {
-    //
+    return view('auth.login');
   }
 
   // Method untuk menangani proses login
