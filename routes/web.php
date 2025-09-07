@@ -32,5 +32,10 @@ Route::middleware(['protected'])->group(function () {
   Route::middleware('checkRole:guru')->group(function () {
     // Tambahkan route guru di sini
   });
+
+  // Guru Piket routes
+  Route::middleware('checkRole:guru_piket')->group(function () {
+    // Tambahkan route guru piket di sini
+  });
   
 });
