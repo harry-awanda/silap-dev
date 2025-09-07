@@ -28,4 +28,9 @@ Route::middleware(['protected'])->group(function () {
     // Tambahkan route admin di sini
   });
 
+  // Guru routes
+  Route::middleware('checkRole:guru')->group(function () {
+    // Tambahkan route guru di sini
+  });
+  
 });
