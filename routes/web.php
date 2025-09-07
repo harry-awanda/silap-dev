@@ -37,5 +37,10 @@ Route::middleware(['protected'])->group(function () {
   Route::middleware('checkRole:guru_piket')->group(function () {
     // Tambahkan route guru piket di sini
   });
+
+  // Shared routes between Guru and Guru BK
+  Route::middleware('checkRole:guru,guru_bk')->group(function () {
+    // Tambahkan route yang dibagikan antara guru dan guru BK di sini
+  });
   
 });
