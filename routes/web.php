@@ -19,7 +19,7 @@ Route::controller(AuthController::class)->group(function() {
 });
 
 // Routes with common 'auth' middleware
-Route::middleware(['protected'])->group(function () {
+Route::middleware(['auth'])->group(function () {
   Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard')
   ->middleware('checkRole:admin,guru,guru_piket,guru_bk,siswa');
 
