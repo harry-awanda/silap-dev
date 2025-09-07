@@ -22,5 +22,10 @@ Route::controller(AuthController::class)->group(function() {
 Route::middleware(['protected'])->group(function () {
   Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard')
   ->middleware('checkRole:admin,guru,guru_piket,guru_bk,siswa');
-  
+
+  // Admin routes
+  Route::prefix('admin')->name('admin.')->middleware('checkRole:admin')->group(function () {
+    // Tambahkan route admin di sini
+  });
+
 });
