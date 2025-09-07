@@ -42,5 +42,9 @@ Route::middleware(['protected'])->group(function () {
   Route::middleware('checkRole:guru,guru_bk')->group(function () {
     // Tambahkan route yang dibagikan antara guru dan guru BK di sini
   });
+
+  Route::middleware(['checkRole:siswa'])->group(function () {
+    // Tambahkan route siswa di sini
+  });
   
 });
